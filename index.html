@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Clandestina</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+    <noscript>
+        <p>La página que estás viendo requiere el uso de JavaScript. Si lo has deshabilitado intencionadamente, por favor vuelve a activarlo.</p>
+    </noscript>
+    <header>
+        <div class="cabecera">
+            <h1>LA CLANDESTINA</h1>
+        </div>
+        <div>
+            <h3>Delivery sin Cargo!!</h3>
+            <h3>¿Que estas esperando? llama ya al 2664024039</h3>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main1">
+            <div class="carousel">
+                <div class="imgs fade">
+                    <div class="gotaDeAgua">PROMO 1</div>
+                    <img class="imagenes" src="images/promo1a.jpg" width="400px" height="500px">
+                </div>
+                <div class="imgs fade">
+                    <div class="gotaDeAgua">PROMO 2</div>
+                    <img class="imagenes" src="images/promo2a.jpg" width="400px" height="500px">
+                </div>
+                <div class="imgs fade">
+                    <div class="gotaDeAgua">PROMO 3</div>
+                    <img class="imagenes" src="images/promo3a.jpg" width="400px" height="500px">
+                </div>
+                <a class="prev" onclick="puntero(-1)">&#10094;</a>
+                <a class="next" onclick="puntero(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="punto" onclick="orden(1)"></span>
+                <span class="punto" onclick="orden(2)"></span>
+                <span class="punto" onclick="orden(3)"></span>
+            </div>
+            <div class="productos">
+                <h3>BEBIDAS BLANCAS</h3>
+                <ul class="producto">
+                    <li>SMIRNOFF $1140</li>
+                    <li>FERNET BRANCA $1230</li>
+                </ul>
+                <h3>CERVEZAS</h3>
+                <ul class="producto">
+                    <li>QUILMES 1L $300</li>
+                    <li>ANDES 1L $300</li>
+                    <li>QUILMES 473ML $140</li>
+                    <li>SCHNEIDER 710ML $240</li>
+                </ul>
+                <h3>GASEOSAS</h3>
+                <ul class="producto">
+                    <li>COCA COLA 3L $390</li>
+                    <li>COCA COLA RETORNABLE 2,5 $360</li>
+                    <li>SECCO 3L $180</li>
+                    <li>PASO DE LOS TOROS $260</li>
+                </ul>
+                <h3>VINOS Y ENERGIZANTES</h3>
+                <ul class="producto">
+                    <li>VINO TORO 1L $240</li>
+                    <li>VINO CROTA 1L $240</li>
+                    <li>SPEED 250ML $140</li>
+                    <li>SPEED 473ML $240</li>
+                </ul>
+                <h3>CIGARRILLOS</h3>
+                <ul class="producto">
+                    <li>PHILIPMORRIS 10 COMUN $190</li>
+                    <li>KIEL $130</li>
+                    <li>CHESTERFIELD 20 MENTOLADO $290</li>
+                </ul>
+            </div>
+            <h3>MAS VARIEDAD DE PRODUCTOS PRONTO..</h3>
+        </div>
+    </div>
+    <footer id="Contactos" class="footer">
+        <div class="conteiner">
+            <p>Copyright © 2022 Todos los derechos de autor reservados.</p>
+            <ul>
+                <li class="nada"><img src="https://img.icons8.com/color/48/000000/gmail--v1.png" height="20px"
+                        width="20px" />laclandestina11@gmail.com</li>
+                <li class="nada"><a href="https://www.instagram.com/la.clandestina1/" title="facebook"><img
+                            src="https://img.icons8.com/color/48/000000/instagram-new--v1.png" width="20px"
+                            height="20px" />la.clandestina1</a></li>
+                <li class="nada"><img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" height="20px"
+                        width="20px" />2664024039</li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        var lugar = 1;
+        verimagenes(lugar);
+        function puntero(n) {
+            verimagenes(lugar += n);
+        }
+        function orden(n) {
+            verimagenes(lugar = n);
+        }
+        function verimagenes(n) {
+            var i;
+            var imagen = document.getElementsByClassName("imgs");
+            var puntos = document.getElementsByClassName("punto");
+            if (n > imagen.length) { lugar = 1 }
+            if (n < 1) { lugar = imagen.length }
+            for (i = 0; i < imagen.length; i++) {
+                imagen[i].style.display = "none";
+            }
+            for (i = 0; i < puntos.length; i++) {
+                puntos[i].className = puntos[i].className.replace(" active", "");
+            }
+            imagen[lugar - 1].style.display = "block";
+            puntos[lugar - 1].className += " active";
+        }
+    </script>
+</body>
+</html>
