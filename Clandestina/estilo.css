@@ -3,12 +3,17 @@
     box-sizing: border-box
 }
 
-img {
+.imgs {
+    display: none;
+}
+
+.imagenes {
     vertical-align: middle;
+    border-radius: 1em;
 }
 
 .carousel {
-    max-width: 500px;
+    max-width: 435px;
     position: relative;
     margin: auto;
     z-index: 1;
@@ -39,19 +44,10 @@ img {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
+
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-.contador {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
 }
 
 .gotaDeAgua {
@@ -63,13 +59,7 @@ img {
     text-align: center;
     text-shadow:
         0 0 5px rgb(255, 12, 222, 1),
-        0 0 10px rgba(255, 12, 222, 1),
-        0 0 20px rgba(255, 12, 222, 1),
         0 0 40px rgb(175, 0, 105, 1),
-        0 0 80px rgba(175, 0, 105, 1),
-        0 0 90px rgba(175, 0, 105, 1),
-        0 0 100px rgb(96, 0, 82, 1),
-        0 0 140px rgba(96, 0, 82, 1),
         0 0 180px rgba(96, 0, 82, 1);
 }
 
@@ -137,10 +127,6 @@ h1 {
         0 0 10px rgba(255, 12, 222, 1),
         0 0 20px rgba(255, 12, 222, 1),
         0 0 40px rgb(175, 0, 105, 1),
-        0 0 80px rgba(175, 0, 105, 1),
-        0 0 90px rgba(175, 0, 105, 1),
-        0 0 100px rgb(96, 0, 82, 1),
-        0 0 140px rgba(96, 0, 82, 1),
         0 0 180px rgba(96, 0, 82, 1);
 }
 
@@ -196,90 +182,131 @@ h3 {
     text-shadow:
         0 0 5px rgba(0, 178, 255, 1),
         0 0 10px rgba(0, 178, 255, 1),
-        0 0 20px rgba(0, 178, 255, 1),
-        0 0 40px rgba(38, 104, 127, 1),
         0 0 80px rgba(38, 104, 127, 1),
-        0 0 90px rgba(38, 104, 127, 1),
-        0 0 100px rgba(38, 104, 127, 1),
-        0 0 140px rgba(38, 104, 127, 1),
         0 0 180px rgba(38, 104, 127, 1);
 }
+/*footer*/
+footer {
+    background-color: black;
+    margin-top: 5%;
+}
 
+.nada {
+    margin: auto;
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-size: 1em;
+    text-align: center;
+    text-shadow:
+        0 0 5px rgb(255, 12, 222, 1),
+        0 0 90px rgba(175, 0, 105, 1),
+        0 0 180px rgba(96, 0, 82, 1);
+    list-style-type: none;
+}
+p{
+    margin: auto;
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-size: 1em;
+    text-align: center;
+    text-shadow:
+        0 0 5px rgb(255, 12, 222, 1),
+        0 0 40px rgb(175, 0, 105, 1),
+        0 0 180px rgba(96, 0, 82, 1);
+}
+
+/*media*/
 @media only screen and (max-width: 1060px) {
     .productos li {
         margin: 1px;
         font-size: 1em;
     }
+
     .producto {
         margin-left: 10em;
         margin-right: 10em;
     }
+
     h1 {
         font-size: 5em;
     }
-    h3{
+
+    h3 {
         font-size: 1.5em;
-    }
-    footer{     
-        font-size: 1em;
     }
 }
 
 @media only screen and (max-width: 740px) {
-    .producto{
+    .producto {
+        width: 70%;
+        margin: auto;
+        align-content: center;
+    }
+
+    .main {
         width: 100%;
         margin: 0;
     }
-    .main{
-        width: 100%;
-        margin: 0;
-    }
-    h1{
+
+    h1 {
         font-size: 3em;
     }
-    h3{
+
+    h3 {
         font-size: 1em;
     }
-    .main1{
+
+    .main1 {
         border: none;
     }
-    .carousel{
+
+    .carousel {
         margin-top: 1em;
     }
-    .producto li{
+
+    .producto li {
         font-size: 0.8em;
     }
-    footer{
-        font-size: 0.8em;
+
+}
+
+@media only screen and (max-width: 485px) {
+    .imagenes {
+        width: 300px;
+        height: 400px;
+    }
+
+    .carousel {
+        max-width: 335px;
+    }
+    .nada {
+        font-size: 0.5em;
+    }
+    p{
+        font-size: 0.5em;
+    }
+    .gotaDeAgua{
+        font-size: 15px;
     }
 }
-
-/*footer*/
-footer {
-    background-color: black;
-    margin: auto;
-    padding: auto;
-    font-family: 'Oswald', sans-serif;
-    color: #ffffff;
-    font-size: 1em;
-    margin-top: 5%;
-    text-align: center;
-    text-shadow:
-        0 0 5px rgb(255, 12, 222, 1),
-        0 0 10px rgba(255, 12, 222, 1),
-        0 0 20px rgba(255, 12, 222, 1),
-        0 0 40px rgb(175, 0, 105, 1),
-        0 0 80px rgba(175, 0, 105, 1),
-        0 0 90px rgba(175, 0, 105, 1),
-        0 0 100px rgb(96, 0, 82, 1),
-        0 0 140px rgba(96, 0, 82, 1),
-        0 0 180px rgba(96, 0, 82, 1);
+@media only screen and (max-width: 380px){
+    .producto {
+        width: 90%;
+        margin: auto;
+        align-content: center;
+    }
 }
+@media only screen and (max-width: 360px) {
+    .imagenes {
+        width: 200px;
+        height: 300px;
+    }
 
-.nada {
-    list-style-type: none;
-}
+    .carousel {
+        max-width: 235px;
+    }
+    h1{
+        font-size: 2em;
+    }
 
-.nada img {
-    width: 1.5em;
 }
