@@ -1,0 +1,333 @@
+/*carrousel*/
+* {
+    box-sizing: border-box
+}
+
+imgs {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.carousel {
+    max-width: 450px;
+    position: relative;
+    margin: auto;
+    z-index: 1;
+    margin-top: 3em;
+    border-style: groove;
+    padding: 1em;
+    border-color: rgb(255, 11, 247);
+    border-radius: 2em;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(255, 11, 243);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.contador {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.gotaDeAgua {
+    font-size: 25px;
+    padding: 8px 12px;
+    position: absolute;
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    text-shadow:
+        0 0 5px rgb(255, 12, 222, 1),
+        0 0 10px rgba(255, 12, 222, 1),
+        0 0 20px rgba(255, 12, 222, 1),
+        0 0 40px rgb(175, 0, 105, 1),
+        0 0 80px rgba(175, 0, 105, 1),
+        0 0 90px rgba(175, 0, 105, 1),
+        0 0 100px rgb(96, 0, 82, 1),
+        0 0 140px rgba(96, 0, 82, 1),
+        0 0 180px rgba(96, 0, 82, 1);
+}
+
+.punto {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(255, 12, 222, 1);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: rgb(96, 0, 82, 1);
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+/*header*/
+h1 {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-size: 7em;
+    margin-top: 5%;
+    text-align: center;
+    text-shadow:
+        0 0 5px rgb(255, 12, 222, 1),
+        0 0 10px rgba(255, 12, 222, 1),
+        0 0 20px rgba(255, 12, 222, 1),
+        0 0 40px rgb(175, 0, 105, 1),
+        0 0 80px rgba(175, 0, 105, 1),
+        0 0 90px rgba(175, 0, 105, 1),
+        0 0 100px rgb(96, 0, 82, 1),
+        0 0 140px rgba(96, 0, 82, 1),
+        0 0 180px rgba(96, 0, 82, 1);
+}
+
+/*body*/
+body {
+    background-color: black;
+}
+
+.main {
+    border-style: groove;
+    border-color: rgb(7, 230, 255);
+    padding: auto;
+    margin: 2em;
+    border-radius: 2em;
+}
+
+.main1 {
+    border-style: groove;
+    margin: 0.5em;
+    padding: auto;
+    border-color: rgb(255, 239, 11);
+    border-radius: 2em;
+}
+
+.productos {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-size: 1em;
+    text-align: center;
+}
+
+.producto {
+    border-style: groove;
+    border-color: rgb(255, 239, 11);
+    border-radius: 1em;
+    margin-left: 20em;
+    margin-right: 20em;
+    padding: 1em;
+}
+
+.productos li {
+    margin: 5px;
+    text-align: left;
+    list-style: square;
+    list-style-position: inside;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+    text-shadow:
+        0 0 5px rgba(0, 178, 255, 1),
+        0 0 10px rgba(0, 178, 255, 1),
+        0 0 20px rgba(0, 178, 255, 1),
+        0 0 40px rgba(38, 104, 127, 1),
+        0 0 80px rgba(38, 104, 127, 1),
+        0 0 90px rgba(38, 104, 127, 1),
+        0 0 100px rgba(38, 104, 127, 1),
+        0 0 140px rgba(38, 104, 127, 1),
+        0 0 180px rgba(38, 104, 127, 1);
+}
+
+@media only screen and (max-width: 1060px) {
+    .productos li {
+        margin: 1px;
+        text-align: left;
+        list-style: square;
+        list-style-position: inside;
+        font-family: 'Oswald', sans-serif;
+        color: #ffffff;
+        font-size: 1em;
+    }
+
+    .producto {
+        border-style: groove;
+        border-color: rgb(255, 239, 11);
+        border-radius: 1em;
+        margin-left: 10em;
+        margin-right: 10em;
+        padding: 1em;
+    }
+    h1 {
+        font-family: 'Oswald', sans-serif;
+        color: #ffffff;
+        font-size: 5em;
+        margin-top: 5%;
+        text-align: center;
+        text-shadow:
+            0 0 5px rgb(255, 12, 222, 1),
+            0 0 10px rgba(255, 12, 222, 1),
+            0 0 20px rgba(255, 12, 222, 1),
+            0 0 40px rgb(175, 0, 105, 1),
+            0 0 80px rgba(175, 0, 105, 1),
+            0 0 90px rgba(175, 0, 105, 1),
+            0 0 100px rgb(96, 0, 82, 1),
+            0 0 140px rgba(96, 0, 82, 1),
+            0 0 180px rgba(96, 0, 82, 1);
+    }
+    h3{
+        font-family: 'Oswald', sans-serif;
+        color: #ffffff;
+        font-size: 1.5em;
+        text-align: center;
+        text-shadow:
+            0 0 5px rgba(0, 178, 255, 1),
+            0 0 10px rgba(0, 178, 255, 1),
+            0 0 20px rgba(0, 178, 255, 1),
+            0 0 40px rgba(38, 104, 127, 1),
+            0 0 80px rgba(38, 104, 127, 1),
+            0 0 90px rgba(38, 104, 127, 1),
+            0 0 100px rgba(38, 104, 127, 1),
+            0 0 140px rgba(38, 104, 127, 1),
+            0 0 180px rgba(38, 104, 127, 1);
+    }
+    footer{     
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .producto{
+        width: 100%;
+        margin: 0;
+    }
+    .main{
+        width: 100%;
+        margin: 0;
+    }
+    h1{
+        font-size: 3em;
+    }
+    h3{
+        font-size: 1em;
+    }
+    .main1{
+        border: none;
+    }
+    .carousel{
+        margin-top: 1em;
+    }
+    .producto li{
+        font-size: 0.8em;
+    }
+    footer{
+        font-size: 0.8em;
+    }
+}
+
+/*footer*/
+footer {
+    background-color: black;
+    margin: auto;
+    padding: auto;
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-size: 1em;
+    margin-top: 5%;
+    text-align: center;
+    text-shadow:
+        0 0 5px rgb(255, 12, 222, 1),
+        0 0 10px rgba(255, 12, 222, 1),
+        0 0 20px rgba(255, 12, 222, 1),
+        0 0 40px rgb(175, 0, 105, 1),
+        0 0 80px rgba(175, 0, 105, 1),
+        0 0 90px rgba(175, 0, 105, 1),
+        0 0 100px rgb(96, 0, 82, 1),
+        0 0 140px rgba(96, 0, 82, 1),
+        0 0 180px rgba(96, 0, 82, 1);
+}
+
+.nada {
+    list-style-type: none;
+}
+
+.nada img {
+    width: 1.5em;
+}
