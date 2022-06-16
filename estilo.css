@@ -244,8 +244,8 @@ p{
     }
 
     .main {
-        width: 100%;
-        margin: 0;
+        width: 95%;
+        margin: auto;
     }
 
     h1 {
@@ -254,10 +254,6 @@ p{
 
     h3 {
         font-size: 1em;
-    }
-
-    .main1 {
-        border: none;
     }
 
     .carousel {
@@ -270,7 +266,7 @@ p{
 
 }
 
-@media only screen and (max-width: 485px) {
+@media only screen and (max-width: 500px) {
     .imagenes {
         width: 300px;
         height: 400px;
@@ -288,6 +284,17 @@ p{
     .gotaDeAgua{
         font-size: 15px;
     }
+    .main {
+        max-width: 100%;
+        margin: auto;
+    }
+    .main1 {
+        margin: 3px;
+    }
+    .nada img{
+        width: 7px;
+        height: 7px;
+    }
 }
 @media only screen and (max-width: 380px){
     .producto {
@@ -296,7 +303,7 @@ p{
         align-content: center;
     }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 400px) {
     .imagenes {
         width: 200px;
         height: 300px;
